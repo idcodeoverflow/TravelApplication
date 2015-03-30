@@ -38,7 +38,7 @@ import cbedoy.cblibrary.utils.ImageLoaderService;
  * Facebook: https://www.facebook.com/carlos.bedoy
  * Github: https://github.com/cbedoy
  */
-public class ApplicationLoader extends Application
+public class ApplicationLoader extends SugarApp
 {
     public static volatile Handler mainHandler;
     public static volatile Context mainContext;
@@ -59,12 +59,6 @@ public class ApplicationLoader extends Application
         mainContext = getApplicationContext();
         mainHandler = new Handler(getMainLooper());
         mainLayoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-        boldFont 	                    = Typeface.createFromAsset(mainContext.getAssets(), "fonts/Roboto-Bold.ttf");
-        regularFont                     = Typeface.createFromAsset(mainContext.getAssets(), "fonts/Roboto-Regular.ttf");
-        thinFont 	                    = Typeface.createFromAsset(mainContext.getAssets(), "fonts/Roboto-Thin.ttf");
-        lightFont 	                    = Typeface.createFromAsset(mainContext.getAssets(), "fonts/Roboto-Light.ttf");
-        cardFont 	                    = Typeface.createFromAsset(mainContext.getAssets(), "fonts/CardType.ttf");
 
         options = new DisplayImageOptions.Builder()
                 .showImageOnLoading(R.drawable.ic_launcher)
